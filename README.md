@@ -5,7 +5,7 @@ Bo Huang<sup>1</sup> · Wenlun Xu · Qizhuo Han · Haodong Jing · Ying Li<sup>*
 
 <sup>1</sup> School of Software, Northwestern Polytechnical University
 
-<a href='https://arxiv.org/abs/2503.07307'><img src='https://img.shields.io/badge/arxiv-paper-red'></a> [![GitHub](https://img.shields.io/github/stars/HuanBor/CBAM-AOD-Net?style=social)](https://github.com/HuanBor/CBAM-AOD-Net)
+<a href='https://arxiv.org/abs/2503.07307'><img src='https://img.shields.io/badge/arxiv-paper-red'></a> [![GitHub](https://img.shields.io/github/stars/HuanBor/AttenST?style=social)](https://github.com/HuanBor/CBAM-AOD-Net)
 
 
 ![imgs](imgs/Framework.png)
