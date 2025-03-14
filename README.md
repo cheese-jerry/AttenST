@@ -3,9 +3,9 @@
 
 Bo Huang<sup>1</sup> · Wenlun Xu · Qizhuo Han · Haodong Jing · Ying Li<sup>*</sup>.
 
-<sup>1</sup> School of Software, Northwestern Polytechnical University
+<sup>1</sup> Northwestern Polytechnical University, Xi'an, China
 
-<a href='https://arxiv.org/abs/2503.07307'><img src='https://img.shields.io/badge/arxiv-paper-red'></a> [![GitHub](https://img.shields.io/github/stars/HuanBor/AttenST?style=social)](https://github.com/HuanBor/CBAM-AOD-Net)
+<a href='https://arxiv.org/abs/2503.07307'><img src='https://img.shields.io/badge/arxiv-paper-red'></a> [![GitHub](https://img.shields.io/github/stars/HuanBor/AttenST?style=social)](https://github.com/HuanBor/AttenST)
 
 
 ![imgs](imgs/Framework.png)
@@ -38,7 +38,7 @@ Download the `stabilityai/stable-diffusion-xl-base-1.0`:
 ```
 huggingface-cli download --resume-download stabilityai/stable-diffusion-xl-base-1.0
 ```
-Download the image encoder and :
+Download pre-trained image encoder and adapter:
 ```
 huggingface-cli download --resume-download h94/IP-Adapter
 ```
@@ -61,7 +61,7 @@ python eval_artfid.py --sty ../path/to/style/images --cnt ../path/to/content/ima
 ```
 
 ## Acknowledgements
-Our code is built upon StyleID and instantStyle. [StyleID](https://github.com/jiwoogit/StyleID) and [InstantStyle](https://github.com/instantX-research/InstantStyle).
+Our code is built upon [StyleID](https://github.com/jiwoogit/StyleID) and [InstantStyle](https://github.com/instantX-research/InstantStyle).
 
 ## Citation
 If you find our work usefulfor your research, please cite:
