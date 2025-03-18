@@ -1,7 +1,7 @@
 <div align="center">
 <h1>AttenST: A Training-Free Attention-Driven Style Transfer Framework with Pre-Trained Diffusion Models</h1>
 
-Bo Huang<sup>1</sup> · Wenlun Xu · Qizhuo Han · Haodong Jing · Ying Li<sup>*</sup>.
+Bo Huang<sup>1</sup> · Wenlun Xu · Qizhuo Han<sup>1</sup> · Haodong Jing · Ying Li<sup>*</sup><sup>1</sup>.
 
 <sup>1</sup> Northwestern Polytechnical University, Xi'an, China
 
