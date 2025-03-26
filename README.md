@@ -64,7 +64,7 @@ python eval_artfid.py --sty ../path/to/style/images --cnt ../path/to/content/ima
 Our code is built upon [StyleID](https://github.com/jiwoogit/StyleID) and [InstantStyle](https://github.com/instantX-research/InstantStyle).
 
 ## Citation
-If you find our work usefulfor your research, please cite:
+If you find our work useful for your research, please cite:
 ```BibTeX
 @misc{huang2025attensttrainingfreeattentiondrivenstyle,
       title={AttenST: A Training-Free Attention-Driven Style Transfer Framework with Pre-Trained Diffusion Models}, 
