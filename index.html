@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG" />
+  <meta property="og:url" content="URL OF THE WEBSITE" />
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>AttenST</title>
+  <link rel="icon" type="image/x-icon" href="static/images/AttenST.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+
+</head>
+
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">AttenST: A Training-Free Attention-Driven Style Transfer Framework
+              with Pre-Trained Diffusion Models</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://github.com/HuanBor" target="_blank">Bo Huang</a>,<sup>1</sup></span>
+              <span class="author-block">
+                <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Wenlun Xu</a><sup>2</sup>,</span>
+              <span class="author-block">
+                <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Qizhuo Han</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Haodong Jing</a><sup>3</sup>,</span>
+              <span class="author-block">
+                <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Ying Li</a><sup>1</sup><sup>*</sup>,</span>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Northwestern Polytechnical University</span>,</span>
+              <span class="author-block"><sup>2</sup>Northwest A&F University</span>,</span>
+              <span class="author-block"><sup>3</sup>Xi’an Jiaotong University</span>,</span>
+              <span class="eql-cntrb"><small><br><sup>*</sup>Corresponding Author</small></span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Arxiv PDF link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2503.07307" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+
+                <!-- Github link -->
+                <span class="link-block">
+                  <a href="https://github.com/HuanBor/AttenST" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2503.07307" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Teaser video-->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="static/images/Qualitative_Results.jpg" alt="" />
+
+        <h2 class="content has-text-justified">
+          Results of our AttenST style transfer model. Given a content image and a style reference image, our method
+          effectively transfers
+          the style while preserving content details, resulting in superior image quality and better style transfer
+          performance.
+        </h2>
+      </div>
+    </div>
+  </section>
+  <!-- End teaser video -->
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              While diffusion models have achieved remarkable progress in style transfer tasks, existing methods
+              typically rely on
+              fine-tuning or optimizing pre-trained models during inference, leading to high computational costs and
+              challenges in
+              balancing content preservation with style integration. To address these limitations, we introduce AttenST,
+              a
+              training-free attention-driven style transfer framework. Specifically, we propose a style-guided
+              self-attention
+              mechanism that conditions self-attention on the reference style by retaining the query of the content
+              image while
+              substituting its key and value with those from the style image, enabling effective style feature
+              integration. To
+              mitigate style information loss during inversion, we introduce a style-preserving inversion strategy that
+              refines
+              inversion accuracy through multiple resampling steps. Additionally, we propose a content-aware adaptive
+              instance
+              normalization, which integrates content statistics into the normalization process to optimize style fusion
+              while
+              mitigating the content degradation. Furthermore, we introduce a dual-feature cross-attention mechanism to
+              fuse content
+              and style features, ensuring a harmonious synthesis of structural fidelity and stylistic expression.
+              Extensive
+              experiments demonstrate that AttenST outperforms existing methods, achieving state-of-the-art performance
+              in style
+              transfer dataset.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+
+
+  <!-- Paper poster -->
+  <section class="section hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-">
+            <h2 class="title is-2">Method</h2>
+            <div class="content has-text-justified">
+              <td colspan="3">
+              </td>
+            </div>
+
+            <div class="columns is-centered has-text-justified">
+              <td colspan="3">
+                <img src="static/images/Framework.png" alt="" width="1500" />
+              </td>
+            </div>
+            <div class="content has-text-justified">
+              <td colspan="3">
+                <p>
+                  <b>Pipeline of the AttenST</b>: We start with the style-preserving inversion to invert content image
+                  \( x^c_0 \) and
+                  style image \( x^s_0 \), obtaining their respective latent noise representations, denoted as \( X^c_T
+                  \) and \( X^s_T
+                  \). During this process, the query of the content image \( Q^{c} \) and the key-value pairs of the
+                  style image \(
+                  (K^{s}, V^{s}) \) are extracted. Subsequently, the proposed CA-AdaIN mechanism is employed to refine
+                  the latent
+                  representation of the content, producing \( x^{cs}_t \), which serves as the initial noise input for
+                  the UNet denoising
+                  process. Throughout denoising, the key and value derived from the self-attention of the style image
+                  are injected into
+                  the designated self-attention layers, facilitating the integration of style features. Simultaneously,
+                  the features of
+                  the style and content images are processed through the DF-CA and incorporated into the corresponding
+                  blocks via
+                  cross-attention. This strategy constrains the generation process, ensuring effective style integration
+                  while preserving
+                  the original content, thereby achieving an optimal balance between style and content fidelity.
+                </p>
+              </td>
+            </div>
+
+            <p><br></p>
+            <div class="columns is-centered has-text-justified">
+              <td colspan="3">
+                <img src="static/images/inversion.png" alt="" />
+              </td>
+            </div>
+            <div class="content has-text-justified">
+              <td colspan="3">
+                <p>
+                  <b>Style-Preserving Inversion</b>: We introduces a novel style-preserving inversion technique designed
+                  to enhance the accuracy of style transfer. The core
+                  innovation lies in refining the inversion direction during the inversion process. Unlike previous
+                  approaches that
+                  approximate the inversion direction by reversing the denoising trajectory, we start with a linear
+                  assumption to obtain
+                  the initial inversion estimate and iteratively refine the inversion trajectory through multiple
+                  resampling steps. This
+                  ensures better style integration and content preservation, achieving a balanced fusion of both.
+                </p>
+              </td>
+            </div>
+            <p><br></p>
+
+            <div class="columns is-centered has-text-justified">
+              <td colspan="4">
+                <img src="static/images/CA-AdaIN.png" alt="" />
+              </td>
+            </div>
+
+            <div class="content has-text-justified">
+              <td colspan="3">
+                <p>
+                  <b>Content-Aware AdaIN</b>:
+                  Extensive research has demonstrated that precise initialization noise control substantially enhances
+                  generation
+                  quality. Building upon these insights, we implement adaptive instance normalization (AdaIN) to
+                  modulate the content
+                  image's latent noise representation by aligning its statistical properties (mean and variance) with
+                  style features,
+                  enabling early-stage style integration.
+                  Nevertheless, this approach tends to compromise content fidelity. To overcome this challenge, we
+                  introduce
+                  Content-Aware AdaIN (CA-AdaIN), an enhanced normalization technique that integrates content statistics
+                  during
+                  denoising initialization and employs dual modulation parameters (\( \alpha_s \) for style intensity
+                  and \( \alpha_c \)
+                  for content preservation) to achieve optimal balance between stylistic expression and content
+                  integrity.
+                </p>
+
+                <div class="content has-text-centered">
+                  <p>
+                    $$
+                    x_{T}^{cs} = (\alpha_s \sigma(x^s_T) + \alpha_c \sigma(x^c_T)) \left( \frac{x -
+                    \mu(x^c_T)}{\sigma(x^c_T)} \right) +
+                    (\alpha_s \mu(x^s_T) + \alpha_c \mu(x^c_T))
+                    $$
+                  </p>
+                </div>
+                <p>
+                  Where \( \alpha_c \) and \( \alpha_s \) are parameters controlling the strength of the content and
+                  style features, and
+                  \( \alpha_c + \alpha_s = 1 \). The introduction of the content weight \( \alpha_c \) enables CA-AdaIN
+                  to retain a
+                  portion of the content feature
+                  statistics during normalization. By adjusting the ratio of \( \alpha_c \) and \( \alpha_s \), CA-AdaIN
+                  dynamically
+                  balances the representation of content and style, effectively mitigating the loss of content
+                  information during the
+                  style transfer process.
+                </p>
+              </td>
+            </div>
+
+
+            <p><br></p>
+            <div class="columns is-centered has-text-justified">
+              <td colspan="3">
+              </td>
+            </div>
+            <div class="content has-text-justified">
+              <td colspan="3">
+                <p>
+                  <b>Dual-Feature Cross-Attention</b>: we propose a dual-feature cross-attention (DF-CA) mechanism. This
+                  innovative approach maximizes the potential of
+                  attention mechanisms by simultaneously embedding both content and style features into the generation
+                  process through
+                  cross-attention mechanism. We employ pre-trained CLIP image encoders to extract semantically-aligned
+                  feature embeddings from
+                  content and style images. These embeddings capture the intrinsic semantic relationships and visual
+                  characteristics,
+                  providing robust representations of both content structure and stylistic elements. Following this, we
+                  compute the
+                  cross-attention for the content and style features using
+                </p>
+              </td>
+            </div>
+
+            <!-- Add equations below -->
+            <div class="content has-text-centered">
+              <p>
+                $$
+                \phi^c = \text{Attention}(Q, K^c, V^c) = \text{Softmax}\left(\frac{Q K^{cT}}{\sqrt{d}}\right) V^c
+
+                $$
+              </p>
+              <p>
+                $$
+                \phi^s = \text{Attention}(Q, K^s, V^s) = \text{Softmax}\left(\frac{Q K^{sT}}{\sqrt{d}}\right) V^s
+                $$
+              </p>
+            </div>
+            <p><br></p>
+
+            <div class="content has-text-justified">
+              <td colspan="3">
+                <p>The extracted image features are then integrated into the UNet via decoupled cross-attention. The
+                  final
+                  cross-attention
+                  calculation is demonstrated in the following equation:</p>
+              </td>
+            </div>
+
+            <!-- Add equations below -->
+            <div class="content has-text-centered">
+              <p>
+                $$
+                \phi^{final}= \phi^{text} +\phi^{c} +\phi^{s}
+
+                $$
+              </p>
+            </div>
+            <p><br></p>
+
+
+          </div>
+  </section>
+  <!--End paper poster -->
+
+  <!-- Video grid single ref -->
+  <section class="section hero is-small is-light">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column custom-width">
+            <h2 class="title is-2">Results</h2>
+            <div class="content has-text-justified">
+              <td colspan="3">
+              </td>
+            </div>
+
+            <div class="content has-text-justified">
+              <td colspan="3">
+                <img src="static/images/additional_tradition.jpg" alt="" width="2160" />
+                <p>
+                  Additional comparison results between AttenST and traditional methods, highlighting the superiority of
+                  AttenST in terms
+                  of style transfer quality, content preservation, and overall generation performance.
+                </p>
+              </td>
+            </div>
+
+            <h3 class="title is-3">Ablation Study</h3>
+            <div class="content has-text-justified">
+              <td colspan="3">
+                <img src="static/images/x4.png" alt="" width="2160" />
+                <p>
+                  We conduct comprehensive ablation studies to systematically evaluate the contribution of each
+                  component in our
+                  framework. (1) - SG-SA: removal of the style-guided self-attention mechanism; (2) - SPI: replacement
+                  of our style-preserving inversion with standard DDIM
+                  inversion; (3) - CA-AdaIN: substitution of our content-aware AdaIN with original AdaIN; and (4) -
+                  DF-CA: elimination of
+                  the dual-feature cross-attention mechanism.
+                </p>
+              </td>
+            </div>
+
+            <h3 class="title is-3">Additional Results of AttenST</h3>
+            <div class="columns is-centered has-text-centered">
+              <td colspan="3">
+                <img src="static/images/x1.png" alt="" />
+              </td>
+            </div>
+
+            <div class="content has-text-centered">
+              <td colspan="3">
+                <p>Additional Results of AttenST</p>
+              </td>
+            </div>
+
+            <div class="columns is-centered has-text-centered">
+              <td colspan="3">
+                <img src="static/images/x2.png" alt="" />
+              </td>
+            </div>
+
+            <div class="content has-text-centered">
+              <td colspan="3">
+                <p>Additional Results of AttenST</p>
+              </td>
+            </div>
+          </div>
+        </div>
+        <p><br></p>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@misc{huang2025attensttrainingfreeattentiondrivenstyle,
+      title={AttenST: A Training-Free Attention-Driven Style Transfer Framework with Pre-Trained Diffusion Models},
+      author={Bo Huang and Wenlun Xu and Qizhuo Han and Haodong Jing and Ying Li},
+      year={2025},
+      eprint={2503.07307},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2503.07307},
+      }</code></pre>
+    </div>
+  </section>
+  <!--End BibTex citation -->
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+
+            <p>
+              This page was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project
+              page.
+              <br> This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Statcounter tracking code -->
+
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+  <!-- End of Statcounter Code -->
+
+</body>
+
+</html>
